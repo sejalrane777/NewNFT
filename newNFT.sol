@@ -43,7 +43,7 @@ contract COC is ERC721, Ownable {
         require(msg.value >= price * _numTokens, "Please send minimum price");
         uint currTotalSupply = totalSupply;
         require(currTotalSupply + _numTokens <= MAX_TOKENS, "Exceed total supply");     //This will be helpfull when you are close of minting of that collection
-        //9991 + 10 != 1000
+       
 
         for(uint256 i=1; i <= _numTokens; i++){
             _safeMint(msg.sender, i);           //_safeMint(msg.sender, tokenId)//
